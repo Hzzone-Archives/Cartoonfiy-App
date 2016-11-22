@@ -240,8 +240,10 @@ QImage process(QImage& inImage) {
 
     int size = inImage.width() * inImage.height();
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++){
         oImg[i] = qBound(0, iImg[i], 255);
+        oImg[i] = 255 - oImg[i];
+    }
     return outImage;
 }
 
