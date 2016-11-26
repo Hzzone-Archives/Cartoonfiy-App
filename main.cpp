@@ -1,8 +1,7 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <QLabel>
-#include <QCamera>
-#include "cameraframegrabber.h"
+//#include <QLabel>
+//#include <QCamera>
 
 
 int main(int argc, char *argv[])
@@ -14,12 +13,12 @@ int main(int argc, char *argv[])
 //    myLabel.show();
 //    QImage outImage = process(inImage);
 //    outImage.save("/Users/HZzone/Desktop/Dachuang2016/canny.png");
-//    MainWindow w;
-//    w.show();
-    QCamera*  _camera = new QCamera();
-    CameraFrameGrabber* _cameraFrameGrabber = new CameraFrameGrabber();
-    _camera->setViewfinder(_cameraFrameGrabber);
-    _camera->start();
+    MainWindow w;
+    w.show();
+//    QCamera*  _camera = new QCamera();
+//    CameraFrameGrabber* _cameraFrameGrabber = new CameraFrameGrabber();
+//    _camera->setViewfinder(_cameraFrameGrabber);
+//    _camera->start();
 
     return a.exec();
 }

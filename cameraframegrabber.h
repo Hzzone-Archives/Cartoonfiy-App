@@ -5,7 +5,9 @@
 #include <QList>
 #include <QLabel>
 #include "picprocess.h"
+#include <QCamera>
 
+extern QLabel* show_label;
 class CameraFrameGrabber : public QAbstractVideoSurface
 {
     Q_OBJECT
@@ -15,8 +17,8 @@ public:
     QList<QVideoFrame::PixelFormat> supportedPixelFormats(QAbstractVideoBuffer::HandleType handleType) const;
 
     bool present(const QVideoFrame &frame);
-private:
-    QLabel* show_label;
+//private:
+//    QLabel* show_label;
 
 signals:
     void frameAvailable(QImage frame);

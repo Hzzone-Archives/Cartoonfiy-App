@@ -1,10 +1,14 @@
 
 #include "cameraframegrabber.h"
 
+QLabel* show_label;
+
 CameraFrameGrabber::CameraFrameGrabber(QObject *parent) :
     QAbstractVideoSurface(parent)
 {
-    show_label = new QLabel();
+    QCamera*  _camera = new QCamera();
+    _camera->setViewfinder(this);
+    _camera->start();
 }
 
 QList<QVideoFrame::PixelFormat> CameraFrameGrabber::supportedPixelFormats(QAbstractVideoBuffer::HandleType handleType) const
